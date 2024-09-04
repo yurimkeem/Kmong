@@ -4,8 +4,57 @@
   text-decoration: none;
   list-style: none;
 }
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 100;
+  src: url(/font/NotoSansKR-Thin.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 200;
+  src: url(/font/NotoSansKR-ExtraLight.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 300;
+  src: url(/font/NotoSansKR-Light.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 400;
+  src: url(/font/NotoSansKR-Regular.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 500;
+  src: url(/font/NotoSansKR-Medium.woff) format(woff),
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 600;
+  src: url(/font/NotoSansKR-SemiBold.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 700;
+  src: url(/font/NotoSansKR-Bold.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 800;
+  src: url(/font/NotoSansKR-ExtraBold.woff) format(woff);
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 900;
+  src: url(/font/NotoSansKR-Black.woff) format(woff);
+}
+
 body {
   font-size: 16px;
+  font-family: "NotoSansKR", sans-serif;
 }
 .wrap {
   position: relative;
@@ -18,19 +67,27 @@ body {
   margin: 0 auto;
 }
 .section {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 .section .design-wrap {
-  background-color: darkseagreen;
-  padding: 2rem;
+  background: url(/img/img_bg.png) no-repeat;
+  background-size: contain;
+  background-color: #dae8c3;
+  padding: 2.5rem;
   font-size: 1rem;
 }
 .section .design-wrap > h2 {
   text-align: center;
+  padding: 0 3rem;
+  max-width: 68%;
+    margin: 0 auto;
+}
+.section .design-wrap > h2 > img {
+  width: 100%;
 }
 .flower-content {
   position: relative;
-  padding: 2rem 0;
+  padding: 3.875rem 0 4.375rem;
 }
 .flower-content .flower-list {
   position: relative;
@@ -38,19 +95,37 @@ body {
 .flower-content .flower-list .list-item {
   position: relative;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 1.3rem;
+  box-shadow: 11px 11px 13px 0 rgba(90, 140, 53,0.1);
 }
+
 .flower-content .flower-list .list-item + .list-item {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .flower-list .list-item > a {
   display: flex;
-  padding: 1rem;
+}
+.flower-list .list-item > a > .item-img {
+  display: flex;
+  width: 100%;
+}
+.flower-list .list-item > a > .item-img img {
+  width: 100%;
+}
+.item-desc {
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+.item-desc img {
+  display: inline-block;
+  width: 100%;
 }
 .list-item .item-title {
   font-size: 1.5rem;
-  color: blue;
+  color: #5a8c35;
   font-weight: 600;
 }
 .list-item .item-title .block {
@@ -61,12 +136,15 @@ body {
 }
 .list-item .price-wrap {
   display: flex;
-  flex: 1 1 auto;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
+  gap: 2rem;
+
 }
 .list-item .price-wrap em {
-  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 3.375rem;
   font-style: normal;
   color:#000;
 }
@@ -74,13 +152,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
-  border-radius: 2rem;
-  background-color: cadetblue;
-  color: #fff;
 }
 .flower-bottom {
+  position: relative;
+  
+}
+.flower-bottom p {
+  font-size: 1.875rem;
+  font-weight: 400;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
+  color: #5a8c35;
 }
