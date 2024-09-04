@@ -1,0 +1,132 @@
+@import "./mixin";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.page-skip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    top: -120rem;
+    right: 0;
+    left: 0;
+    height: 60rem;
+    background-color: color(base, 090);
+
+    // laptop
+    @include desktop {
+        height: 80rem;
+    }
+
+    .skip-item {
+        color: color(base, 000);
+        @include font((outline: body, size: small-1x)...);
+    }
+
+    &:focus-within {
+        top: 0;
+    }
+}
+// 데스크탑
+@include desktop {
+	.visual {
+        color:red;
+    }
+    .main-slider {
+        position: relative;
+        .slider-item {
+            width: 100%;
+            height: 10rem;
+        }
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 노트북에서 데스크탑
+@include desktopToLaptop {
+	.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 노트북
+@include laptop {
+	.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 태블릿에서 노트북
+@include laptopToTablet {
+	.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 태블릿
+@include tablet {
+	.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 모바일에서 태블릿
+@include tabletToMobile  {
+	.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}
+
+
+// 모바일
+@include mobile  {
+.visual {
+    }
+    
+    .section {
+    }
+    
+    .footer {
+    }
+}

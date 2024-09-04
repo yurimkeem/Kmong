@@ -1,0 +1,124 @@
+// 모바일
+$breakpoint-mobile: 335px;
+
+// 모바일에서 태블릿
+$breakpoint-tabletToMobile: 535px;
+
+// 태블릿
+$breakpoint-tablet: 720px;
+
+// 태블릿에서 노트북
+$breakpoint-laptopToTablet: 960px;
+
+// 노트북
+$breakpoint-laptop: 1024px;
+
+// 노트북에서 데스크탑
+$breakpoint-desktopToLaptop: 1500px;
+
+// 데스크탑
+$breakpoint-desktop: 1800px;
+
+
+
+// color palettes
+$color-palettes: (
+	bui: (
+		100: #000000,
+		090: #121212,
+		080: #242424,
+		070: #444444,
+		060: #666666,
+		050: #787878,
+		040: #999999,
+		030: #cccccc,
+		020: #e2e2e2,
+		010: #f0f0f0,
+		005: #fafafa,
+		000: #ffffff,
+	),
+	
+	base: (
+		100: #000000,
+		090: #191919,
+		080: #313233,
+		070: #4a4b4c,
+		060: #636466,
+		050: #7c7d7f,
+		040: #949599,
+		030: #adaeb2,
+		020: #dcdce0,
+		010: #ecedf0,
+		005: #f6f6f9,
+		000: #ffffff,
+	),
+
+	primary: (
+		100: #000000,
+		090: #5a080d,
+		080: #7c0c12,
+		070: #b5111a,
+		060: #e21521,
+		050: #e8444d,
+		040: #ee737a,
+		030: #f3a1a6,
+		020: #f9ccce,
+		000: #ffffff,
+	),
+
+	secondary: (
+		100: #000000,
+		090: #0f1526,
+		080: #21283f,
+		070: #2a3353,
+		060: #3a456d,
+		050: #4d577b,
+		040: #7b84a3,
+		030: #abafbf,
+		020: #cdd0e0,
+		010: #e5e7ef,
+		000: #ffffff
+	),
+
+	normal: (
+		100: #000000,
+		010: #191919,
+		020: #4a4b4c,
+		030: #7c7d7f,
+		040: #adaeb2,
+		050: #ffffff,
+		060: #ffffff,
+		070: #ffffff,
+		080: #ffffff,
+		090: #ffffff,
+		000: #ffffff,
+	),
+
+	accent: (
+		100: #000000,
+		010: #e21521,
+		020: #323b5d,
+		030: #0f1526,
+		040: #abafbf,
+		050: #ffffff,
+		060: #ffffff,
+		070: #ffffff,
+		080: #ffffff,
+		090: #ffffff,
+		000: #ffffff,
+	),
+);
+
+// @ text accent
+$text-accent: (
+	normal-00: color(normal, 100),
+	normal-01: color(normal, 010),
+	normal-02: color(normal, 020),
+	normal-03: color(normal, 030),
+	normal-04: color(normal, 040),
+	normal-10: color(normal, 000),
+	accent-01: color(accent, 010),
+	accent-02: color(accent, 020),
+	accent-03: color(accent, 030),
+	accent-04: color(accent, 040),
+);

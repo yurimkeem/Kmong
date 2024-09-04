@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-size: 16px;
+}
+.wrap {
+  position: relative;
+
+}
+.content {
+  position: relative;
+  max-width: 52.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.section {
+  padding: 1.5rem;
+}
+.section .design-wrap {
+  background-color: darkseagreen;
+  padding: 2rem;
+  font-size: 1rem;
+}
+.section .design-wrap > h2 {
+  text-align: center;
+}
+.flower-list-wrap {
+  position: relative;
+  padding: 2rem 0;
+}
+.flower-list-wrap .flower-list {
+  position: relative;
+}
+.flower-list-wrap .flower-list .list-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.flower-list-wrap .flower-list .list-item > a {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+.list-item .item-title {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: 600;
+}
+.list-item .item-title .block {
+  display: block;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.list-item .price-wrap {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.list-item .price-wrap em {
+  font-size: 2.5rem;
+  font-style: normal;
+  color:#000;
+}
+.list-item .price-wrap .buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  background-color: cadetblue;
+  color: #fff;
+}
+.flower-list-wrap .flower-list .list-item + .list-item {
+  margin-top: 1rem;
+}
+.flower-bottom {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
