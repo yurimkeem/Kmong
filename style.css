@@ -28,19 +28,22 @@ body {
 .section .design-wrap > h2 {
   text-align: center;
 }
-.flower-list-wrap {
+.flower-content {
   position: relative;
   padding: 2rem 0;
 }
-.flower-list-wrap .flower-list {
+.flower-content .flower-list {
   position: relative;
 }
-.flower-list-wrap .flower-list .list-item {
+.flower-content .flower-list .list-item {
   position: relative;
   background-color: #fff;
   border-radius: 1rem;
 }
-.flower-list-wrap .flower-list .list-item > a {
+.flower-content .flower-list .list-item + .list-item {
+  margin-top: 1rem;
+}
+.flower-list .list-item > a {
   display: flex;
   padding: 1rem;
   flex-direction: column;
@@ -75,9 +78,6 @@ body {
   border-radius: 2rem;
   background-color: cadetblue;
   color: #fff;
-}
-.flower-list-wrap .flower-list .list-item + .list-item {
-  margin-top: 1rem;
 }
 .flower-bottom {
   text-align: center;
