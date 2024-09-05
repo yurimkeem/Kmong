@@ -70,7 +70,7 @@ body {
   /* padding: 1.5rem; */
 }
 .section .design-wrap {
-  background: url(/img/img_bg.png) no-repeat;
+  background: url(./img/img_bg.png) no-repeat;
   background-size: contain;
   background-color: #dae8c3;
   padding: 2.5rem;
