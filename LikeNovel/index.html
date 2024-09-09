@@ -33,7 +33,7 @@
     <div class="inner-section">
         <div class="link-list-wrap">
             <ul class="link-list">
-                <li class="link-item"><a href="#">TOP50</a></li>
+                <li class="link-item new"><a href="#">TOP50</a></li>
                 <li class="link-item"><a href="#">무료</a></li>
                 <li class="link-item"><a href="#">유료</a></li>
                 <li class="link-item"><a href="#">선호작</a></li>
@@ -41,46 +41,89 @@
         </div>
         <!-- main -->
         <div class="main">
-            <div class="main-slide">
-                <div style="padding:100px 100px; background-color: skyblue;">
-                    <div class="main-slider  single-item">
-                    <div class="slider-item">1</div>
-                    <div class="slider-item">2</div>
-                    <div class="slider-item">3</div>
-                    <div class="slider-item">4</div>
+            <section class="visual">
+                <div class="main-slide">
+                    <div class="main-slider-wrap">
+                        <div class="main-slider single-item">
+                            <div class="slider-item">
+                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                            </div>
+                        </div>
+                        <div class="numcount sPage1"><span class="now">1</span><span> / 20</span></div>
                     </div>
+                    <script>
+                        const slide = $('.main-slider');
+                        const initPercent = 100 / ($('.main-slider').find('.slider-item').length);
+                        slide.slick({
+                            infinite: true,
+                            speed: 2000,
+                            slidesToShow: 1,
+                            centerMode: true,
+                            autoplay: true,
+                            appendDots: '.slick--visual__paging',
+                            customPaging: function (slider, i) {
+                                return  '<span>'+(i + 1)+'</span><span>/</span><span>' + slider.slideCount + '</span>';
+                                    }
+                        });
+                        $('.main-slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+
+                        var i = (currentSlide ? currentSlide : 0) + 1;
+
+                        $('.sPage1').html("<span class='now'>"+i+"</span><span> / "+slick.slideCount+"</span>");
+
+                        });
+
+                    </script>
                 </div>
-                <script>
-                    $('.single-item').slick();
-            </script>
-            </div>
-            <!-- visual -->
-            <section class="visual animation">
                 <div class="main-category">
                     <ul class="category">
                         <li>
                             <a href="#">
-                                <span class="subject">선호작</span>
+                                <span class="category-img">
+                                    <img src="./assets/images/main/ico_main_category1.svg" style="width: 30%;">
+                                </span>
+                                <span class="category-tit">선호작</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="subject">프로모션</span>
+                                <span class="category-img">
+                                    <img src="./assets/images/main/ico_main_category2.svg">
+                                </span>
+                                <span class="category-tit">프로모션</span>
+                            </a>
+                        </li>
+                        <li class="sale">
+                            <a href="#">
+                                <span class="category-img">
+                                    <img src="./assets/images/main/ico_main_category3.svg">
+                                </span>
+                                <span class="category-tit">코인충전</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="subject">코인충전</span>
+                                <span class="category-img">
+                                    <img src="./assets/images/main/ico_main_category4.svg">
+                                </span>
+                                <span class="category-tit">리뷰홍보</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="subject">리뷰홍보</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="subject">퀘스트</span>
+                                <span class="category-img">
+                                    <img src="./assets/images/main/ico_main_category5.svg">
+                                </span>
+                                <span class="category-tit">퀘스트</span>
                             </a>
                         </li>
                     </ul>
@@ -88,43 +131,158 @@
             </section>
 
             <!-- SK ecoplant -->
-            <section class="ecoplant">
-                <div class="inner">
-                    <div class="heading animation">
-                        <h2>SK ecoplant</h2>
-                        <div class="link">
-                            <a href="#" class="btn_go">
-                                <span class="txt">환경</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <a href="#" class="btn_go">
-                                <span class="txt">에너지</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <a href="#" class="btn_go">
-                                <span class="txt">솔루션</span>
-                                <span class="arrow"></span>
-                            </a>
-                        </div>
+            <section class="section best-free-top">
+                <div class="section-subject">
+                    <div class="subject-cont">
+                        <h3 class="title">인기 무료 Top</h3>
+                        <span class="time-now">24.07.22 12:35기준</span>
                     </div>
-
-                    <div class="content animation">
-                        <div class="hgroup animation">
-                            <h4>SK ecoplant</h4>
-                            <h3>Climate Solution Leader<br> SK ecoplant</h3>
-                            <p class="txt">
-                                LIKE NOVEL는 ESG 경영을 토대로 비즈니스 모델 혁신을 이어가고 있습니다.<br>
-                                우리는 지구와 인류가 마주한 기후위기를 극복하기 위해<br>
-                                환경-에너지-솔루션 사업의 시너지를 바탕으로 혁신적인 솔루션을 제공합니다.<br><br>
-
-                                LIKE NOVEL는 ESG 경영을 통해 우리의 사회적 책임을 성실히 이행하고,<br>
-                                모두의 지속가능한 미래를 위한 새로운 기회를 창출해 나가겠습니다.
-                            </p>
-                        </div>
-                        <div class="bg animation">
-                            <img src="assets/images/main/img_ecoplant.jpg" alt="">
-                        </div>
+                    <div class="more">
+                        <a href="#"><span class="txt">더보기</span></a>
                     </div>
+                </div>
+                <div class="section-content">
+                    <div class="main-slider-wrap">
+                        <div class="cartoon-slider">
+                            <div class="slider-item">
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                        </div>
+                                        <div class="ranking">1</div>
+                                        <div class="content-wrap">
+                                            <div class="title">세계전복급 악역으로 오해
+                                                받고 있습니다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                        </div>
+                                        <div class="ranking">2</div>
+                                        <div class="content-wrap">
+                                            <div class="title">게임 속 조연은 집착 당한다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                        </div>
+                                        <div class="ranking">3</div>
+                                        <div class="content-wrap">
+                                            <div class="title">잿빛 길을 걷다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                        </div>
+                                        <div class="ranking">1</div>
+                                        <div class="content-wrap">
+                                            <div class="title">세계전복급 악역으로 오해
+                                                받고 있습니다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                        </div>
+                                        <div class="ranking">2</div>
+                                        <div class="content-wrap">
+                                            <div class="title">게임 속 조연은 집착 당한다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                        </div>
+                                        <div class="ranking">3</div>
+                                        <div class="content-wrap">
+                                            <div class="title">잿빛 길을 걷다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                        </div>
+                                        <div class="ranking">1</div>
+                                        <div class="content-wrap">
+                                            <div class="title">세계전복급 악역으로 오해
+                                                받고 있습니다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                        </div>
+                                        <div class="ranking">2</div>
+                                        <div class="content-wrap">
+                                            <div class="title">게임 속 조연은 집착 당한다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                        </div>
+                                        <div class="ranking">3</div>
+                                        <div class="content-wrap">
+                                            <div class="title">잿빛 길을 걷다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <script>
+                        $('.cartoon-slider').slick({
+                            infinite: true,
+                            speed: 2000,
+                            slidesToShow: 1.05,
+                            autoplay: false
+                        });
+
+                    </script>
                 </div>
             </section>
 
