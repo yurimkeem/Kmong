@@ -14,6 +14,21 @@
     height: 78rem;
     margin: 0 auto;
 }
+.main .visual .main-category {
+    position: relative;
+}
+.main .visual .main-category .category {
+    position: relative;
+    display: flex;
+    padding: 2.0625rem 3.0625rem;
+    gap: 1.25rem;
+}
+.main .visual .main-category .category li {
+    width: 4.8125rem;
+    height: 4.8125rem;
+    border-radius: 100%;
+    background-color: #F5F5F5;
+}
 .main .visual .hgroup {
     position: absolute;
     left: 10rem;
