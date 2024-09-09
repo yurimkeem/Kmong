@@ -1,0 +1,11 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.1">
+<path d="M290.25 179.033C290.25 215.866 281.261 227.516 226.04 255.299C170.82 227.516 161.831 215.866 161.831 179.033V135.422C184.946 132.826 207.083 110.278 226.04 95.4043C244.997 110.348 267.134 132.826 290.25 135.422V179.033Z" stroke="white" stroke-width="15" stroke-linecap="round"/>
+<line x1="56.0732" y1="123.158" x2="131.614" y2="123.158" stroke="white" stroke-width="15"/>
+<line x1="56.0732" y1="154.633" x2="131.614" y2="154.633" stroke="white" stroke-width="15"/>
+<line x1="195.825" y1="181.076" x2="257.517" y2="181.076" stroke="white" stroke-width="15"/>
+<line x1="228.612" y1="209.984" x2="228.612" y2="148.293" stroke="white" stroke-width="15"/>
+<rect x="63.1943" y="35.5" width="61.212" height="32.9047" stroke="white" stroke-width="15"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56.0725 45.543H16.5H9V53.043V265.348V272.848H16.5H168.924V257.848H24V60.543H56.0725V45.543ZM131.613 60.543H161.424V94.1888H176.424V53.043V45.543H168.924H131.613V60.543Z" fill="white"/>
+</g>
+</svg>
