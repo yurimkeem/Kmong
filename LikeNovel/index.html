@@ -49,39 +49,54 @@
                     <div class="main-slider-wrap">
                         <div class="main-slider">
                             <div class="slider-item">
-                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="mo" src="./assets/images/main/img_main_slide1_mo.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="pc" src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
                             </div>
                             <div class="slider-item">
-                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="mo" src="./assets/images/main/img_main_slide1_mo.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="pc" src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
                             </div>
                             <div class="slider-item">
-                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="mo" src="./assets/images/main/img_main_slide1_mo.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="pc" src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
                             </div>
                             <div class="slider-item">
-                                <img src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="mo" src="./assets/images/main/img_main_slide1_mo.png" alt="퀸의 대각선 세트 단독 특별판!">
+                                <img class="pc" src="./assets/images/main/img_main_slide1.png" alt="퀸의 대각선 세트 단독 특별판!">
                             </div>
                         </div>
-                        <div class="numcount sPage1"><span class="now">1</span><span> / 20</span></div>
+                        <div class="page-count"><span class="now">1</span><span> / 20</span></div>
                     </div>
                     <script>
                         const slide = $('.main-slider');
                         const initPercent = 100 / ($('.main-slider').find('.slider-item').length);
                         slide.slick({
-                            infinite: true,
                             speed: 2000,
                             slidesToShow: 1,
+                            
+                            infinite: true,
+                            slidesToScroll: 1,
                             centerMode: true,
                             autoplay: true,
-                            appendDots: '.slick--visual__paging',
-                            customPaging: function (slider, i) {
-                                return  '<span>'+(i + 1)+'</span><span>/</span><span>' + slider.slideCount + '</span>';
+                            responsive: [
+                                {
+                                    breakpoint: 960,
+                                    settings: {
+                                        variableWidth: false
                                     }
+                                },
+                                { breakpoint: 320, // 화면의 넓이가 320px 이상일 때
+                                    settings: {
+                                        variableWidth: true
+                                    }
+                                }
+                            ]
                         });
                         $('.main-slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
 
                         var i = (currentSlide ? currentSlide : 0) + 1;
 
-                        $('.sPage1').html("<span class='now'>"+i+"</span><span> / "+slick.slideCount+"</span>");
+                        $('.page-count').html("<span class='now'>"+i+"</span><span> / "+slick.slideCount+"</span>");
 
                         });
 
@@ -147,11 +162,78 @@
                 <div class="section-content">
                     <div class="main-slider-wrap">
                         <div class="cartoon-slider">
-                            <div class="cartoon-item">
+                            <div class="cartoon-items">
+                                <div class="cartoon-item hot">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img class="mo" src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon1.png">
+                                            <div class="update-wrap">
+                                                <div>
+                                                    <div class="update-icon"></div>
+                                                    <div class="update-time">6-9</div>
+                                                </div>
+                                                <div class="update">UP</div>
+                                            </div>
+                                        </div>
+                                        <div class="ranking gold">1</div>
+                                        <div class="content-wrap">
+                                            <div class="title">세계전복급 악역으로 오해
+                                                받고 있습니다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item hot">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img class="mo" src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon2.png">
+                                            <div class="update-wrap">
+                                                <div>
+                                                    <div class="update-icon"></div>
+                                                    <div class="update-time">6-9</div>
+                                                </div>
+                                                <div class="update">UP</div>
+                                            </div>
+                                        </div>
+                                        <div class="ranking silver">2</div>
+                                        <div class="content-wrap">
+                                            <div class="title">게임 속 조연은 집착 당한다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cartoon-item hot">
+                                    <a href="#" class="wrap">
+                                        <div class="img-wrap">
+                                            <img class="mo" src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon3.png">
+                                            <div class="update-wrap">
+                                                <div>
+                                                    <div class="update-icon"></div>
+                                                    <div class="update-time">6-9</div>
+                                                </div>
+                                                <div class="update">UP</div>
+                                            </div>
+                                        </div>
+                                        <div class="ranking dong">3</div>
+                                        <div class="content-wrap">
+                                            <div class="title">잿빛 길을 걷다</div>
+                                            <div class="genre">무협 &bull; 판타지</div>
+                                            <div class="author">로스티플</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cartoon-items">
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon1.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -172,7 +254,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon2.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -192,7 +275,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon3.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -210,11 +294,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="cartoon-item">
+                            <div class="cartoon-items">
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon1.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -235,7 +320,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon2.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -255,7 +341,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon3.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -273,11 +360,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="cartoon-item">
+                            <div class="cartoon-items">
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon1_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon1.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -298,7 +386,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon2_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon2.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -318,7 +407,8 @@
                                 <div class="cartoon-item">
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
-                                            <img src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="mo" src="./assets/images/main/img_cartoon3_mo.png">
+                                            <img class="pc" src="./assets/images/main/img_cartoon3.png">
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -341,8 +431,24 @@
                     <script>
                         $('.cartoon-slider').slick({
                             speed: 2000,
-                            slidesToShow: 1,
-                            autoplay: true
+                            slidesToShow: 3,
+                            autoplay: true,
+                            responsive: [ // 반응형 웹 구현 옵션
+                                {  
+                                    breakpoint: 960, //화면 사이즈 960px
+                                    settings: {
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow:1 
+                                    } 
+                                },
+                                { 
+                                    breakpoint: 768, //화면 사이즈 768px
+                                    settings: {	
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow:1 
+                                    } 
+                                }
+                            ]
                         });
                     </script>
                 </div>
@@ -440,6 +546,45 @@
                                             <div class="content-wrap">
                                                 <div class="title">빙의 : 처단자</div>
                                                 <div class="author bedge">로스티플</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="auto-item">
+                                    <div class="cartoon-item col">
+                                        <a href="#" class="wrap">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/main/img_pr2.png">
+                                            </div>
+                                            <div class="content-wrap">
+                                                <div class="title">빙의 : 처단자</div>
+                                                <div class="author">로스티플</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="auto-item">
+                                    <div class="cartoon-item col">
+                                        <a href="#" class="wrap">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/main/img_pr2.png">
+                                            </div>
+                                            <div class="content-wrap">
+                                                <div class="title">빙의 : 처단자</div>
+                                                <div class="author">로스티플</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="auto-item">
+                                    <div class="cartoon-item col">
+                                        <a href="#" class="wrap">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/main/img_pr2.png">
+                                            </div>
+                                            <div class="content-wrap">
+                                                <div class="title">빙의 : 처단자</div>
+                                                <div class="author">로스티플</div>
                                             </div>
                                         </a>
                                     </div>
@@ -588,9 +733,28 @@
                     <script>
                         $('.auto-slider').slick({
                             speed: 2000,
-                            slidesToShow: 5,
-                            slidesToScroll: 1,
-                            autoplay: true
+                            slidesToShow: 10,
+                            slidesToScroll: 10,
+                            autoplay: true,
+                            responsive: [ // 반응형 웹 구현 옵션
+                                {  
+                                    breakpoint: 960, //화면 사이즈 960px
+                                    settings: {
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow: 10,
+                                        slidesToScroll: 10,
+                                        infinite: true,
+                                    } 
+                                },
+                                { 
+                                    breakpoint: 768, //화면 사이즈 768px
+                                    settings: {	
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow: 5,
+                                        slidesToScroll: 1,
+                                    } 
+                                }
+                            ]
                         });
                         $('.auto-slider.type2').slick({
                             speed: 2000,
@@ -631,11 +795,11 @@
                                                 <div class="update">UP</div>
                                             </div>
                                         </div>
-                                        <div class="ranking">1</div>
+                                        <div class="ranking gold">1</div>
                                         <div class="content-wrap">
                                             <div class="title">세계전복급 악역으로 오해
                                                 받고 있습니다</div>
-                                            <div class="author">로스티플</div>
+                                            <div class="author bedge">로스티플</div>
                                         </div>
                                     </a>
                                 </div>
@@ -651,7 +815,7 @@
                                                 <div class="update">UP</div>
                                             </div>
                                         </div>
-                                        <div class="ranking">2</div>
+                                        <div class="ranking silver">2</div>
                                         <div class="content-wrap">
                                             <div class="title">게임 속 조연은 집착 당한다</div>
                                             <div class="author">로스티플</div>
@@ -670,7 +834,7 @@
                                                 <div class="update">UP</div>
                                             </div>
                                         </div>
-                                        <div class="ranking">3</div>
+                                        <div class="ranking dong">3</div>
                                         <div class="content-wrap">
                                             <div class="title">잿빛 길을 걷다</div>
                                             <div class="author">로스티플</div>
@@ -865,7 +1029,8 @@
                             infinite: true,
                             speed: 2000,
                             slidesToShow: 1,
-                            autoplay: false
+                            autoplay: false,
+                            
                         });
 
                     </script>
