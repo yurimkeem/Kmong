@@ -148,7 +148,7 @@ input::-webkit-search-results-decoration{
     top: 0;
     left: 0;
     width: 100%;
-    height: 9rem;
+    height: 100px;
     z-index: 1000;
 }
 .header::before {
@@ -170,7 +170,7 @@ input::-webkit-search-results-decoration{
     display: flex;
     align-items: center;
     padding-left: 238px;
-    width: 182rem;
+    width: 1080px;
     height: 100%;
     margin: 0 auto;
     background: #fff;
@@ -179,7 +179,7 @@ input::-webkit-search-results-decoration{
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
     width: 12.8rem;
     height: 5.6rem;
     z-index: 10;
@@ -236,7 +236,19 @@ input::-webkit-search-results-decoration{
 .header .gnb .menu > li > a > .ico {
     display: none;
 }
-
+.header .guest-noti {
+    position: absolute;
+    right: 0;
+    top: 17px;
+    font-size: 14px;
+    line-height: 16.71px;
+    font-weight: 400;
+    color: #444852;
+}
+.header .guest-noti .point {
+    color: #2F7FFF;
+    font-weight: 600;
+}
 
 /* only pc hover */
 @media (min-width: 1181px) {
@@ -251,9 +263,6 @@ input::-webkit-search-results-decoration{
         background: #fff;
     }
 
-    .header .inner {
-        width: 1080px;
-    }
     .header h1 {
         width: calc(100vw * (171 / 1919));
         height: calc(100vw * (33 / 1919));
@@ -486,14 +495,18 @@ input::-webkit-search-results-decoration{
         padding: 0 1.0375rem;
     }
     .header .util {
+        transform: translateY(-50%);
         z-index: 11;
     }
     .header h1 {
+        transform: translateY(-50%);
         left: calc(100vw * (40 / 767));
         width: calc(100vw * (311 / 1125));
         height: calc(100vw * (80 / 767));
     }
-
+    .header .guest-noti {
+        display: none;
+    }
     .header .gnb {
         top: calc(100vw * (160 / 767));
         left: auto;
@@ -707,7 +720,7 @@ input::-webkit-search-results-decoration{
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-10%);
     display: flex;
     align-items: center;
     gap: 2.4rem;
