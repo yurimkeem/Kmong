@@ -42,6 +42,16 @@
                 <li class="link-item"><a href="#">선호작</a></li>
             </ul>
         </div>
+        <script>
+            var bodyOffset = jQuery('body').offset();
+            jQuery(window).scroll(function() {
+                if (jQuery(document).scrollTop() > bodyOffset.top) {
+                    jQuery('header').addClass('scroll');
+                } else {
+                    jQuery('header').removeClass('scroll');
+                }
+            });
+        </script>
         <!-- main -->
         <div class="main">
             <section class="visual">
@@ -73,22 +83,19 @@
                         slide.slick({
                             speed: 2000,
                             slidesToShow: 1,
-                            
                             infinite: true,
                             slidesToScroll: 1,
+                            variableWidth: true,
                             centerMode: true,
                             autoplay: true,
                             responsive: [
-                                {
-                                    breakpoint: 960,
-                                    settings: {
+                                { 
+                                    breakpoint: 768, //화면 사이즈 768px
+                                    settings: {	
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow:1,
                                         variableWidth: false
-                                    }
-                                },
-                                { breakpoint: 320, // 화면의 넓이가 320px 이상일 때
-                                    settings: {
-                                        variableWidth: true
-                                    }
+                                    } 
                                 }
                             ]
                         });
@@ -104,6 +111,14 @@
                 </div>
                 <div class="main-category">
                     <ul class="category">
+                        <li class="event">
+                            <a href="#">
+                                <span class="category-img">
+                                    <img src="./assets/images/main/img_category_event.png">
+                                </span>
+                                <span class="category-tit">이벤트</span>
+                            </a>
+                        </li>
                         <li>
                             <a href="#">
                                 <span class="category-img">
@@ -433,19 +448,14 @@
                             speed: 2000,
                             slidesToShow: 3,
                             autoplay: true,
+                            dots: true,
                             responsive: [ // 반응형 웹 구현 옵션
-                                {  
-                                    breakpoint: 960, //화면 사이즈 960px
-                                    settings: {
-                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                                        slidesToShow:1 
-                                    } 
-                                },
                                 { 
                                     breakpoint: 768, //화면 사이즈 768px
                                     settings: {	
                                         //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                                        slidesToShow:1 
+                                        slidesToShow:1 ,
+                                        dots: false
                                     } 
                                 }
                             ]
@@ -758,9 +768,28 @@
                         });
                         $('.auto-slider.type2').slick({
                             speed: 2000,
-                            slidesToShow: 5,
-                            slidesToScroll: 1,
-                            autoplay: true
+                            slidesToShow: 10,
+                            slidesToScroll: 10,
+                            autoplay: true,
+                            responsive: [ // 반응형 웹 구현 옵션
+                                {  
+                                    breakpoint: 960, //화면 사이즈 960px
+                                    settings: {
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow: 10,
+                                        slidesToScroll: 10,
+                                        infinite: true,
+                                    } 
+                                },
+                                { 
+                                    breakpoint: 768, //화면 사이즈 768px
+                                    settings: {	
+                                        //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                                        slidesToShow: 5,
+                                        slidesToScroll: 1,
+                                    } 
+                                }
+                            ]
                         });
 
                     </script>
@@ -1177,11 +1206,19 @@
                     </div>
                     <script>
                         $('.best-Paid-top .cartoon-slider').slick({
-                            infinite: true,
+                            infinite: false,
                             speed: 2000,
                             slidesToShow: 1,
                             autoplay: false,
-                            
+                            responsive: [ // 반응형 웹 구현 옵션
+                                { 
+                                    breakpoint: 768, //화면 사이즈 768px
+                                    settings: {	
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                    } 
+                                }
+                            ]
                         });
 
                     </script>
@@ -1397,6 +1434,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr1.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1419,6 +1469,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr2.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1440,6 +1503,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr3.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1460,6 +1536,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr1.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1481,6 +1570,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr2.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1502,6 +1604,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr3.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1522,6 +1637,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr2.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>
@@ -1542,6 +1670,19 @@
                                     <a href="#" class="wrap">
                                         <div class="img-wrap">
                                             <img src="./assets/images/main/img_pr2.png">
+                                            <div class="hover-cont">
+                                                <div class="tag-txt">
+                                                    #판타지 #사극물 
+                                                    #연애물 #이세계 
+                                                    #선사시대 #중세기사 
+                                                    #먼치킨
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <p class="btn-view">354</p>
+                                                    <p class="btn-like">30</p>
+                                                    <p class="btn-save">11</p>
+                                                </div>
+                                            </div>
                                             <div class="update-wrap">
                                                 <div>
                                                     <div class="update-icon"></div>

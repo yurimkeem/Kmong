@@ -139,7 +139,7 @@ input::-webkit-search-results-decoration{
     height: 100vh;
     height: 100dvh;
     background: rgba(17, 17, 17, 0.50);
-    z-index: 1;
+    z-index: 10;
 }
 
 /* header */
@@ -476,6 +476,7 @@ input::-webkit-search-results-decoration{
 @media (max-width: 767px) {
     .header {
         height: calc(100vw * (160 / 767));
+        z-index: 15;
     }
     .header::after {
         top: calc(100vw * (160 / 767));
@@ -483,6 +484,9 @@ input::-webkit-search-results-decoration{
     .header .inner {
         height: calc(100vw * (160 / 767));
         padding: 0 1.0375rem;
+    }
+    .header .util {
+        z-index: 11;
     }
     .header h1 {
         left: calc(100vw * (40 / 767));
@@ -567,12 +571,6 @@ input::-webkit-search-results-decoration{
     .header.on .util .switch-wrap {
         display: block;
     }
-    /* .header.on .menu {
-        display: block;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background: #fff;
-    } */
     /* login-wrap */
     .header.on {
         background: transparent;
@@ -594,7 +592,7 @@ input::-webkit-search-results-decoration{
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
+        z-index: 15;
         width: calc(100% - 4.6875rem);
         height: 100vh;
         padding: 7.3438rem 1.0375rem 0;
@@ -965,10 +963,7 @@ input::-webkit-search-results-decoration{
     }
     
     /* search */
-    .header .search_wrap {
-        right: calc(100vw * (96 / 1919));
-        width: calc(100vw * (300 / 1919));
-    }
+
     .header .search_wrap .input {
         padding: calc(100vw * (10 / 1919)) calc(100vw * (24 / 1919));
         border-radius: calc(100vw * (48 / 1919));
@@ -1015,13 +1010,7 @@ input::-webkit-search-results-decoration{
 
     .header .util .btn_gnb {
         display: none;
-        /* position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        z-index: 100; */
+
     }
     .header .util .btn_gnb span {
         display: block;
@@ -1158,6 +1147,7 @@ input::-webkit-search-results-decoration{
         right: calc(100vw * (40 / 767));
         gap: 1.1563rem;
         align-items: center;
+        z-index: 1001;
     }
     
     .header .util a {
@@ -1263,7 +1253,7 @@ input::-webkit-search-results-decoration{
         right: calc(100vw * (194 / 767));
         top: calc(100vw * (-277 / 767));
         width: 100%;
-        height: calc(100vw * (280 / 767));
+        height: auto;
         padding: 0 calc(100vw * (40 / 767));
         display: flex;
         align-items: center;
@@ -1274,8 +1264,11 @@ input::-webkit-search-results-decoration{
     }
     .header .search_wrap.on {
         display: flex;
-        top: calc(100vw * (160 / 767));
+        padding-top: 6.25rem;
+        padding-bottom: 3.125rem;
+        top: 0;
         pointer-events: all;
+        z-index: 9999;
     }
     .header .search_wrap .input {
         display: flex;
@@ -1336,20 +1329,26 @@ input::-webkit-search-results-decoration{
 @media (max-width: 767px) {
     .inner-section {
         padding-top: calc(100vw * (160 / 767));
+        margin-top: 1.4375rem;
     }
     /* link-list-wrap */
     .link-list-wrap {
-        position: relative;
+        position: sticky;
+        top: 0;
+        height: auto;
+        z-index: 10;
+        overflow: hidden;
+
     }
     .link-list-wrap .link-list {
         position: relative;
         padding: 0 1rem .6875rem 1rem;
-        margin-top: 3.0375rem;
+        margin-top: 1.5625rem;
         display: flex;
-        gap: 2.0375rem;
-        overflow: auto;
+        gap: 1.3938rem;
         white-space: nowrap;
         border-bottom: 1px solid #EBEDF3;
+        background: #fff;
     }
     .link-list-wrap .link-list .link-item {
         position: relative;
