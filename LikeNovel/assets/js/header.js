@@ -88,6 +88,7 @@ function headerGnbMobile() {
     const header = $('.header');
     const btnGnb = header.find('.btn_gnb');
     const gnb = header.find('.gnb');
+    const login = header.find('.login-wrap');
     const menuList = header.find('.gnb > .menu > li');
     const btnSearch = header.find('.btn_search');
     const headerSearch = header.find('.search_wrap');
@@ -99,6 +100,7 @@ function headerGnbMobile() {
             $('body').append(dimGnb);
             header.addClass('on');
             gnb.addClass('on');
+            login.addClass('on');
         } else {
             $('body').removeClass('hidden');
             $('.dim_gnb').stop().fadeOut(function () {
@@ -106,6 +108,7 @@ function headerGnbMobile() {
             });
             header.removeClass('on');
             gnb.removeClass('on');
+            login.removeClass('on');
         }
         if(isMobile() && headerSearch.hasClass('on')) {
             btnSearch.removeClass('on');
